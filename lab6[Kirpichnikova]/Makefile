@@ -1,8 +1,8 @@
 app: main.c filelib.c
- gcc main.c filelib.c -o app
+	gcc main.c filelib.c -o app
 
 run: app
- ./app
+	./app
 
 clean:
- rm -f app log.txt
+	rm -f app log.txt
