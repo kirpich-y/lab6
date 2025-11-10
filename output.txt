@@ -1,8 +1,6 @@
 Makefile
 answers.txt
-error.txt
 file_demo.c
 filelib.c
 filelib.h
 main.c
-output.txt
