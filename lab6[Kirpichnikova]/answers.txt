@@ -1,17 +1,46 @@
 Часть 1.
 1. Команда: echo $$
-Вывод: 3753
-2. Команда: 
+Вывод: 2258
+
+2. Команда: ls -ld  /proc/$$/fd
+Вывод: dr-x------ 2 codespace codespace 9 Nov 10 09:05 /proc/2258/fd
+
+3. Команда: cd /proc/2258/fd && ls -la
 Вывод: 
-3. Команда: 
-Вывод: 
+total 0
+dr-x------ 2 codespace codespace  9 Nov 10 09:05 .
+dr-xr-xr-x 9 codespace codespace  0 Nov 10 09:05 ..
+lrwx------ 1 codespace codespace 64 Nov 10 09:05 0 -> /dev/pts/2
+lrwx------ 1 codespace codespace 64 Nov 10 09:05 1 -> /dev/pts/2
+lrwx------ 1 codespace codespace 64 Nov 10 09:05 2 -> /dev/pts/2
+l-wx------ 1 codespace codespace 64 Nov 10 09:05 22 -> /home/codespace/.vscode-remote/data/logs/20251110T090508/remoteagent.log
+l-wx------ 1 codespace codespace 64 Nov 10 09:05 23 -> /home/codespace/.vscode-remote/data/logs/20251110T090508/remoteTelemetry.log
+l-wx------ 1 codespace codespace 64 Nov 10 09:05 24 -> /home/codespace/.vscode-remote/data/logs/20251110T090508/ptyhost.log
+lrwx------ 1 codespace codespace 64 Nov 10 09:05 255 -> /dev/pts/2
+lrwx------ 1 codespace codespace 64 Nov 10 09:05 26 -> /dev/pts/ptmx
+l-wx------ 1 codespace codespace 64 Nov 10 09:05 6 -> /dev/null
+
 4. Команда: 
 Вывод: 
 
 Ответ на вопрос:
+fd/0 - ввод (stdin)
+fd/1 - вывод (stdout)
+fd/2 - поток ошибок (stderr)
+Определила по номерам дескрипторов:0=stdin, 1=stdout, 2=stderr
+3 дескриптора надо для разделения ввода, обычного вывода и ошибок для гибкого управления потоками
 
 Часть 2.
-1. Команда: 
+1. Команда: echo "вывод"
+Вывод: вывод
+
+2. Команда: ls /abc
+Вывод: ls: cannot access '/abc': No such file or directory
+
+3. Команда: 
+Вывод: 
+
+4. Команда: 
 Вывод: 
 
 Ответ на вопрос:
